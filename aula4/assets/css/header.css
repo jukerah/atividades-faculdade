@@ -1,0 +1,33 @@
+header {
+    background-color: black;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+}
+header * {
+    color: white;
+}
+.header {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}             
+.header nav ul {
+    display: flex;
+    gap: 60px;
+}
+.header nav ul li {
+    list-style: none;
+}
+.header nav ul li a {              
+    border-bottom: 3px solid black;        
+}
+.header nav ul li a:hover {
+    border-bottom: 3px solid white;
+    transition: all ease .5s;
+}

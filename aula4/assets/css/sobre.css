@@ -1,0 +1,14 @@
+#sobre {
+    background-color: rgb(240, 238, 238);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}        
+#sobre {
+    background-color: rgb(255, 255, 255);
+}
+#sobre div {
+    width: 800px;
+    height: 400px;
+    margin-top: 40px;
+}

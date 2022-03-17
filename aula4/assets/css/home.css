@@ -1,0 +1,10 @@
+#home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}        
+#home div {
+    width: 800px;
+    height: 400px;
+    margin-top: 40px;
+}

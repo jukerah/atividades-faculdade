@@ -1,0 +1,25 @@
+@import url(header.css);
+@import url(home.css);
+@import url(sobre.css);
+@import url(contato.css);
+@import url(footer.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+p {
+    font-size: 24px;
+}
+a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
