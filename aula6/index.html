@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        label, input, select, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">            
+        <input id="numOne" type="number" placeholder="Digite o valor A">
+        <input id="numTwo" type="number" placeholder="Digite o valor B">
+
+        <label for="operators">Operação:</label>
+        <select name="operators" id="operators">
+            <option value="sum">Soma</option>
+            <option value="subtraction">Subtração</option>
+            <option value="multiplication">Multiplicação</option>
+            <option value="division">Divisão</option>
+        </select>
+        <button onclick={calculate()}>Calcular</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        const showResult = document.getElementById('result'); 
+            
+        const sum = (numOne, numTwo) => {
+            return calc = numOne + numTwo;
+        }
+
+        const subtraction = (numOne, numTwo) => {
+            return calc = numOne - numTwo;
+        }
+
+        const multiplication = (numOne, numTwo) => {
+            return calc = numOne * numTwo;
+        }
+
+        const division = (numOne, numTwo) => {
+            return calc = numOne / numTwo;
+        }
+
+        const calculate = () => {
+            const numOne = parseFloat(document.getElementById("numOne").value);
+            const numTwo = parseFloat(document.getElementById("numTwo").value);
+            const operator = document.getElementById("operators").value;
+
+            if (numOne >= 0 && numTwo >= 0) {
+                switch (operator) {
+                    case 'sum':
+                        showResult.innerHTML = sum(numOne, numTwo);
+                        break;
+                    case 'subtraction':
+                        showResult.innerHTML = subtraction(numOne, numTwo);
+                        break;
+                    case 'multiplication':
+                        showResult.innerHTML = multiplication(numOne, numTwo);
+                        break;
+                    case 'division':
+                        showResult.innerHTML = division(numOne, numTwo);
+                        break;
+                    default:
+                        showResult.innerHTML = "Operador inválido";
+                        break;
+                }                
+            } else {
+                showResult.innerHTML = "Favor preencher todos os campos!";
+            }           
+        }
+    </script>
+</body>
+</html>
