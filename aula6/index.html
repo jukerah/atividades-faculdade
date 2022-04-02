@@ -15,6 +15,9 @@
         label, input, select, button {
             margin-bottom: 10px;
         }
+        #result {
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
@@ -36,19 +39,19 @@
         const showResult = document.getElementById('result'); 
             
         const sum = (numOne, numTwo) => {
-            return calc = numOne + numTwo;
+            return numOne + numTwo;
         }
 
         const subtraction = (numOne, numTwo) => {
-            return calc = numOne - numTwo;
+            return numOne - numTwo;
         }
 
         const multiplication = (numOne, numTwo) => {
-            return calc = numOne * numTwo;
+            return numOne * numTwo;
         }
 
         const division = (numOne, numTwo) => {
-            return calc = numOne / numTwo;
+            return numOne / numTwo;
         }
 
         const calculate = () => {
@@ -59,16 +62,16 @@
             if (numOne >= 0 && numTwo >= 0) {
                 switch (operator) {
                     case 'sum':
-                        showResult.innerHTML = sum(numOne, numTwo);
+                        showResult.innerHTML = `Resultado: ${sum(numOne, numTwo)}`;
                         break;
                     case 'subtraction':
-                        showResult.innerHTML = subtraction(numOne, numTwo);
+                        showResult.innerHTML = `Resultado: ${subtraction(numOne, numTwo)}`;
                         break;
                     case 'multiplication':
-                        showResult.innerHTML = multiplication(numOne, numTwo);
+                        showResult.innerHTML = `Resultado: ${multiplication(numOne, numTwo)}`;
                         break;
                     case 'division':
-                        showResult.innerHTML = division(numOne, numTwo);
+                        showResult.innerHTML = `Resultado: ${division(numOne, numTwo)}`;
                         break;
                     default:
                         showResult.innerHTML = "Operador inválido";
