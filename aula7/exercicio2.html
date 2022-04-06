@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .multiplication-table {
+            display: flex;
+            align-items: center;
+            margin: 20px 0 0 20px;
+        }
+        .multiplication-table p {
+            font-size: 20px;
+        }
+        .multiplication-table select {
+            width: 60px;
+        }
+        .multiplication-table select, button {
+            padding: 10px;
+            margin-left: 20px;
+        }
+        #result {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="multiplication-table">
+        <p>Valor:</p>
+        <select id="num">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button onclick="calculate()">Gerar</button><br />
+    </div>    
+    <br />
+    <div id="result"></div>
+
+    <script>
+    	const calculate = () => {
+            let num = parseInt(document.getElementById("num").value);
+            let result = document.getElementById("result");
+            let multiplicationTable = "";          
+
+            for(let i = 1; i <= 10; i++) {
+                multiplicationTable += `${num} x ${i} = ${num*i}<br />`;
+            }
+            result.innerHTML = `${multiplicationTable}<br />`;
+        }
+    </script>
+</body>
+</html>
