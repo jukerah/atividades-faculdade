@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove número</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Remove número do texto:</h1>
+    <input id="text" onkeyup="removeNum()" type="text">
+
+    <script>
+        const textInput = document.getElementById('text');    
+
+        const removeNum = () => {
+            let text = textInput.value;
+            let totalLength = text.length;
+
+            for (let i = 0; i < totalLength; i++) {
+                if (text[i] >= 0 || text[i] <= 9) {              
+                    textInput.value = text.replace("0", "").replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
