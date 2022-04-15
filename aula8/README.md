@@ -2,7 +2,7 @@
 
 ## 1) Faça um algoritmo que ao usuário digitar um valor em um campo de texto, o mesmo é validado. Caso seja um número, o mesmo deve ser removido do campo.
 
-<img src="1.jpg">
+<img src="1.png">
 
 ### Projeto: index.html
 
